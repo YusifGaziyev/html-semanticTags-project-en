@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div>
+                <h1>PHP</h1>
+                <p><strong>PHP</strong> is a general-purpose scripting language geared toward web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1994. The PHP reference implementation is now produced by The PHP Group. PHP originally stood for Personal Home Page, but it now stands for the recursive initialism PHP: Hypertext Preprocessor.
+                <br>
+                PHP code is usually processed on a web server by a PHP interpreter implemented as a module, a daemon or as a Common Gateway Interface (CGI) executable. On a web server, the result of the interpreted and executed PHP code – which may be any type of data, such as generated HTML or binary image data – would form the whole or part of an HTTP response. Various web template systems, web content management systems, and web frameworks exist which can be employed to orchestrate or facilitate the generation of that response. Additionally, PHP can be used for many programming tasks outside the web context, such as standalone graphical applications and robotic drone control. PHP code can also be directly executed from the command line.
+                <br>
+                The standard PHP interpreter, powered by the Zend Engine, is free software released under the PHP License. PHP has been widely ported and can be deployed on most web servers on a variety of operating systems and platforms.
+                <br>
+                The PHP language evolved without a written formal specification or standard until 2014, with the original implementation acting as the de facto standard which other implementations aimed to follow. Since 2014, work has gone on to create a formal PHP specification.
+                <br>
+                W3Techs reports that, as of January 2022, "PHP is used by 78.1% of all the websites whose server-side programming language we know." PHP version 7.4 is the most used version. Support for version 7.3 was dropped on 6 December 2021.</p>
+                <a href="img/php.jpg" target="_blank">
+                    <img src="img/php.jpg" alt="PHP" width="350px" height="200px">
+                </a>
+            </div>
+        </header>
+        <hr>
+        <nav class="content">
+            <div>
+                <h2>Content</h2>
+                <ul>
+                    <li><a href="#article1">History</a></li>
+                    <li><a href="#article2">Mascot</a></li>
+                    <li><a href="#article3">Implementations</a></li>
+                    <li><a href="#article4">Licensing</a></li>
+                    <li><a href="#article5">Development and community</a></li>
+                    <li><a href="#article6">PHP Foundation</a></li>
+                    <li><a href="#article7">Installation and configuration</a></li>
+                    <li><a href="#article8">Use</a></li>
+                    <li><a href="#article9">Security</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+        <section>
+            <article class="all-articles">
+                <div id="article1">
+                    <h2>History</h2>
+                    <p>PHP development began in 1994 when Rasmus Lerdorf wrote several Common Gateway Interface (CGI) programs in C, which he used to maintain his personal homepage. He extended them to work with web forms and to communicate with databases, and called this implementation "Personal Home Page/Forms Interpreter" or PHP/FI.
+                    <br>
+                    PHP/FI could be used to build simple, dynamic web applications. To accelerate bug reporting and improve the code, Lerdorf initially announced the release of PHP/FI as "Personal Home Page Tools (PHP Tools) version 1.0" on the Usenet discussion group comp.infosystems.www.authoring.cgi on June 8, 1995. This release already had the basic functionality that PHP has today. This included Perl-like variables, form handling, and the ability to embed HTML. The syntax resembled that of Perl, but was simpler, more limited and less consistent.
+                    <br>
+                    Early PHP was not intended to be a new programming language, and grew organically, with Lerdorf noting in retrospect: "I don't know how to stop it, there was never any intent to write a programming language [...] I have absolutely no idea how to write a programming language, I just kept adding the next logical step on the way." A development team began to form and, after months of work and beta testing, officially released PHP/FI 2 in November 1997.
+                    <br>
+                    The fact that PHP was not originally designed, but instead was developed organically has led to inconsistent naming of functions and inconsistent ordering of their parameters. In some cases, the function names were chosen to match the lower-level libraries which PHP was "wrapping", while in some very early versions of PHP the length of the function names was used internally as a hash function, so names were chosen to improve the distribution of hash values.</p>
+                </div>
+                <hr>
+                <div id="article2">
+                    <h2>Mascot</h2>
+                    <p>The mascot of the PHP project is the elePHPant, a blue elephant with the PHP logo on its side, designed by Vincent Pontier in 1998. "The (PHP) letters were forming the shape of an elephant if viewed in a sideways angle." The elePHPant is sometimes differently colored when in plush toy form.
+                    <br>
+                    Many variations of this mascot have been made over the years. Only the elePHPants based on the original design by Vincent Pontier are considered official by the community. These are collectible and some of them are extremely rare.</p>
+                </div>
+                <hr>
+                <div id="article3">
+                    <h2>Implementations</h2>
+                    <p>The only complete PHP implementation is the original, known simply as PHP. It is the most widely used and is powered by the Zend Engine. To disambiguate it from other implementations, it is sometimes unofficially called "Zend PHP". The Zend Engine compiles PHP source code on-the-fly into an internal format that it can execute, thus it works as an interpreter. It is also the "reference implementation" of PHP, as PHP has no formal specification, and so the semantics of Zend PHP define the semantics of PHP. Due to the complex and nuanced semantics of PHP, defined by how Zend works, it is difficult for competing implementations to offer complete compatibility.
+                    <br>
+                    PHP's single-request-per-script-execution model, and the fact that the Zend Engine is an interpreter, leads to inefficiency; as a result, various products have been developed to help improve PHP performance. In order to speed up execution time and not have to compile the PHP source code every time the web page is accessed, PHP scripts can also be deployed in the PHP engine's internal format by using an opcode cache, which works by caching the compiled form of a PHP script (opcodes) in shared memory to avoid the overhead of parsing and compiling the code every time the script runs. An opcode cache, Zend Opcache, is built into PHP since version 5.5. Another example of a widely used opcode cache is the Alternative PHP Cache (APC), which is available as a PECL extension.
+                    <br>
+                    While Zend PHP is still the most popular implementation, several other implementations have been developed. Some of these are compilers or support JIT compilation, and hence offer performance benefits over Zend PHP at the expense of lacking full PHP compatibility. Alternative implementations include the following:</p>
+                    <ul>
+                        <li>HHVM (HipHop Virtual Machine) – developed at Facebook and available as open source, it converts PHP code into a high-level bytecode (commonly known as an intermediate language), which is then translated into x86-64 machine code dynamically at runtime by a just-in-time (JIT) compiler, resulting in up to 6× performance improvements. However, since version 7.2 Zend has outperformed HHVM, and HHVM 3.24 is the last version to officially support PHP.</li>
+                        <li>Parrot – a virtual machine designed to run dynamic languages efficiently; Pipp transforms the PHP source code into the Parrot intermediate representation, which is then translated into the Parrot's bytecode and executed by the virtual machine.</li>
+                        <li>PeachPie – a second-generation compiler to .NET Common Intermediate Language (CIL) bytecode, built on the Roslyn platform; successor of Phalanger, sharing several architectural components</li>
+                        <li>Phalanger – compiles PHP into .Net Common Intermediate Language bytecode; predecessor of PeachPie</li>
+                        <li>Quercus – compiles PHP into Java bytecode</li>
+                        <li>HipHop – developed at Facebook and available as open source, it transforms the PHP scripts into C++ code and then compiles the resulting code, reducing the server load up to 50%. In early 2013, Facebook deprecated it in favor of HHVM due to multiple reasons, including deployment difficulties and lack of support for the whole PHP language, including the create_function() and eval() constructs.</li>
+                    </ul>
+                </div>
+                <hr>
+                <div id="article4">
+                    <h2>Licensing</h2>
+                    <p>PHP is free software released under the PHP License, which stipulates that:</p>
+                    <blockquote>Products derived from this software may not be called "PHP", nor may "PHP" appear in their name, without prior written permission from group@php.net. You may indicate that your software works in conjunction with PHP by saying "Foo for PHP" instead of calling it "PHP Foo" or "phpfoo".</blockquote>
+                    <p>This restriction on use of "PHP" makes the PHP License incompatible with the General Public License (GPL), while the Zend License is incompatible due to an advertising clause similar to that of the original BSD license.</p>
+                </div>
+                <hr>
+                <div id="article5">
+                    <h2>Development and community</h2>
+                    <p>PHP includes various free and open-source libraries in its source distribution, or uses them in resulting PHP binary builds. PHP is fundamentally an Internet-aware system with built-in modules for accessing File Transfer Protocol (FTP) servers and many database servers, including PostgreSQL, MySQL, Microsoft SQL Server and SQLite (which is an embedded database), LDAP servers, and others. Numerous functions familiar to C programmers, such as those in the stdio family, are available in standard PHP builds.
+                    <br>
+                    PHP allows developers to write extensions in C to add functionality to the PHP language. PHP extensions can be compiled statically into PHP or loaded dynamically at runtime. Numerous extensions have been written to add support for the Windows API, process management on Unix-like operating systems, multibyte strings (Unicode), cURL, and several popular compression formats. Other PHP features made available through extensions include integration with Internet Relay Chat (IRC), dynamic generation of images and Adobe Flash content, PHP Data Objects (PDO) as an abstraction layer used for accessing databases, and even speech synthesis. Some of the language's core functions, such as those dealing with strings and arrays, are also implemented as extensions. The PHP Extension Community Library (PECL) project is a repository for extensions to the PHP language.
+                    <br>
+                    Some other projects, such as Zephir, provide the ability for PHP extensions to be created in a high-level language and compiled into native PHP extensions. Such an approach, instead of writing PHP extensions directly in C, simplifies the development of extensions and reduces the time required for programming and testing.
+                    <br>
+                    By December 2018 the PHP Group consisted of ten people: Thies C. Arntzen, Stig Bakken, Shane Caraveo, Andi Gutmans, Rasmus Lerdorf, Sam Ruby, Sascha Schumann, Zeev Suraski, Jim Winstead, and Andrei Zmievski.
+                    <br>
+                    Zend Technologies provides a PHP Certification based on PHP 7 exam (and previously based on PHP 5.5) for programmers to become certified PHP developers.</p>
+                </div>
+                <hr>
+                <div id="article6">
+                    <h2>PHP Foundation</h2>
+                    <p>On November 26, 2021, the JetBrains blog announced the creation of the PHP Foundation, which will sponsor the design and development of PHP.</p>
+                </div>
+                <hr>
+                <div id="article7">
+                    <h2>Installation and configuration</h2>
+                    <p>There are two primary ways for adding support for PHP to a web server – as a native web server module, or as a CGI executable. PHP has a direct module interface called Server Application Programming Interface (SAPI), which is supported by many web servers including Apache HTTP Server, Microsoft IIS and iPlanet Web Server. Some other web servers, such as OmniHTTPd, support the Internet Server Application Programming Interface (ISAPI), which is Microsoft's web server module interface. If PHP has no module support for a web server, it can always be used as a Common Gateway Interface (CGI) or FastCGI processor; in that case, the web server is configured to use PHP's CGI executable to process all requests to PHP files.
+                    <br>
+                    PHP-FPM (FastCGI Process Manager) is an alternative FastCGI implementation for PHP, bundled with the official PHP distribution since version 5.3.3. When compared to the older FastCGI implementation, it contains some additional features, mostly useful for heavily loaded web servers.
+                    <br>
+                    When using PHP for command-line scripting, a PHP command-line interface (CLI) executable is needed. PHP supports a CLI server application programming interface (SAPI) since PHP 4.3.0. The main focus of this SAPI is developing shell applications using PHP. There are quite a few differences between the CLI SAPI and other SAPIs, although they do share many of the same behaviors.
+                    <br>
+                    PHP has a direct module interface called SAPI for different web servers; in case of PHP 5 and Apache 2.0 on Windows, it is provided in form of a DLL file called php5apache2.dll, which is a module that, among other functions, provides an interface between PHP and the web server, implemented in a form that the server understands. This form is what is known as a SAPI.
+                    <br>
+                    There are different kinds of SAPIs for various web server extensions. For example, in addition to those listed above, other SAPIs for the PHP language include the Common Gateway Interface and command-line interface.
+                    <br>
+                    PHP can also be used for writing desktop graphical user interface (GUI) applications, by using the PHP-GTK extension. PHP-GTK is not included in the official PHP distribution, and as an extension it can be used only with PHP versions 5.1.0 and newer. The most common way of installing PHP-GTK is compiling it from the source code.
+                    <br>
+                    When PHP is installed and used in cloud environments, software development kits (SDKs) are provided for using cloud-specific features. For example:</p>
+                    <ul>
+                        <li>Amazon Web Services provides the AWS SDK for PHP</li>
+                        <li>Microsoft Azure can be used with the Windows Azure SDK for PHP.</li>
+                    </ul>
+                    <p>Numerous configuration options are supported, affecting both core PHP features and extensions. Configuration file php.ini is searched for in different locations, depending on the way PHP is used. The configuration file is split into various sections, while some of the configuration options can be also set within the web server configuration.</p>
+                </div>
+                <hr>
+                <div id="article8">
+                    <h2>Use</h2>
+                    <p>PHP is a general-purpose scripting language that is especially suited to server-side web development, in which case PHP generally runs on a web server. Any PHP code in a requested file is executed by the PHP runtime, usually to create dynamic web page content or dynamic images used on websites or elsewhere. It can also be used for command-line scripting and client-side graphical user interface (GUI) applications. PHP can be deployed on most web servers, many operating systems and platforms, and can be used with many relational database management systems (RDBMS). Most web hosting providers support PHP for use by their clients. It is available free of charge, and the PHP Group provides the complete source code for users to build, customize and extend for their own use.
+                    <br>
+                    Originally designed to create dynamic web pages, PHP now focuses mainly on server-side scripting, and it is similar to other server-side scripting languages that provide dynamic content from a web server to a client, such as Microsoft's ASP.NET, Sun Microsystems' JavaServer Pages, and mod_perl. PHP has also attracted the development of many software frameworks that provide building blocks and a design structure to promote rapid application development (RAD). Some of these include PRADO, CakePHP, Symfony, CodeIgniter, Laravel, Yii Framework, Phalcon and Laminas, offering features similar to other web frameworks.
+                    <br>
+                    The LAMP architecture has become popular in the web industry as a way of deploying web applications. PHP is commonly used as the P in this bundle alongside Linux, Apache and MySQL, although the P may also refer to Python, Perl, or some mix of the three. Similar packages, WAMP and MAMP, are also available for Windows and macOS, with the first letter standing for the respective operating system. Although both PHP and Apache are provided as part of the macOS base install, users of these packages seek a simpler installation mechanism that can be more easily kept up to date.
+                    <br>
+                    For specific and more advanced usage scenarios, PHP offers a well defined and documented way for writing custom extensions in C or C++. Besides extending the language itself in form of additional libraries, extensions are providing a way for improving execution speed where it is critical and there is room for improvements by using a true compiled language. PHP also offers well defined ways for embedding itself into other software projects. That way PHP can be easily used as an internal scripting language for another project, also providing tight interfacing with the project's specific internal data structures.
+                    <br>
+                    PHP received mixed reviews due to lacking support for multithreading at the core language level, though using threads is made possible by the "pthreads" PECL extension.
+                    <br>
+                    A command line interface, php-cli, and two ActiveX Windows Script Host scripting engines for PHP have been produced.</p>
+                </div>
+                <hr>
+                <div id="article9">
+                    <h2>Security</h2>
+                    <p>In 2019, 11% of all vulnerabilities listed by the National Vulnerability Database were linked to PHP; historically, about 30% of all vulnerabilities listed since 1996 in this database are linked to PHP. Technical security flaws of the language itself or of its core libraries are not frequent (22 in 2009, about 1% of the total although PHP applies to about 20% of programs listed). Recognizing that programmers make mistakes, some languages include taint checking to automatically detect the lack of input validation which induces many issues. Such a feature is being developed for PHP, but its inclusion into a release has been rejected several times in the past.
+                    <br>
+                    There are advanced protection patches such as Suhosin and Hardening-Patch, especially designed for web hosting environments.
+                    <br>
+                    Historically, old versions of PHP had some configuration parameters and default values for such runtime settings that made some PHP applications prone to security issues. Among these, magic_quotes_gpc and register_globals configuration directives were the best known; the latter made any URL parameters become PHP variables, opening a path for serious security vulnerabilities by allowing an attacker to set the value of any uninitialized global variable and interfere with the execution of a PHP script. Support for "magic quotes" and "register globals" settings has been deprecated since PHP 5.3.0, and removed from PHP 5.4.0.
+                    <br>
+                    Another example for the potential runtime-settings vulnerability comes from failing to disable PHP execution (for example by using the engine configuration directive) for the directory where uploaded files are stored; enabling it can result in execution of malicious code embedded within the uploaded files. The best practice is to either locate the image directory outside of the document root available to the web server and serve it via intermediary script, or disable PHP execution for the directory which stores the uploaded files.
+                    <br>
+                    Also, enabling the dynamic loading of PHP extensions (via enable_dl configuration directive) in a shared web hosting environment can lead to security issues.
+                    <br>
+                    Implied type conversions that result in different values being treated as equal, sometimes against the programmer's intent, can lead to security issues. For example, the result of the comparison '0e1234' == '0' is true, because strings that are parsable as numbers are converted to numbers; in this case, the first compared value is treated as scientific notation having the value (0×101234), which is zero. Errors like this resulted in authentication vulnerabilities in Simple Machines Forum, Typo3 and phpBB when MD5 password hashes were compared. The recommended way is to use hash_equals() (for timing attack safety), strcmp or the identity operator (===), as '0e1234' === '0' results in false.
+                    <br>
+                    In a 2013 analysis of over 170,000 website defacements, published by Zone-H, the most frequently (53%) used technique was exploitation of file inclusion vulnerability, mostly related to insecure usage of the PHP language constructs include, require, and allow_url_fopen.
+                    <br>
+                    As of April 2021, W3Techs reports that 64% of websites using PHP, use versions 7.2 or older (which are no longer supported by The PHP Development Team) with 35% of all PHP websites using version 5.6 or older.
+                    <br>
+                    Version 5 is still used by 24.5% of all the websites (September 2021). It is highly recommended to migrate to PHP version 7 or 8 and use random_int() instead of rand() or mt_rand(), as the latter functions are not cryptographically-secure. There are two attacks that can be performed over PHP entropy sources: "Seed Attack" and "State recovery attack". With current GPU technologies an attacker can perform up to 2^30 MD5 calculations per second with a $250 GPU, while with an additional $500 can reach up to 2^32 calculations. In combination with a "birthday attack" this can lead to serious security vulnerabilities.</p>
+                </div>
+            </article>
+        </section>
+        <hr>
+        <footer class="footer">
+            <div>
+                <center>
+                    <a href="../javascript1/javascript.html" target="_blank">Javascript</a>
+                    <a href="../python1/python.html" target="_blank">Python</a>
+                    <span><b>PHP</b></span>
+                    <a href="../java1/java.html" target="_blank">Java</a>
+                    <a href="../kotlin/kotlin.html" target="_blank">Kotlin</a>
+                </center>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
